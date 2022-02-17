@@ -1,3 +1,5 @@
+import { type } from 'os';
+
 export interface IPersonData {
     name: string;
     secondName: string;
@@ -11,7 +13,7 @@ export function getPerson(): IPersonData {
     return {
         name: 'Petr',
         secondName: 'Smith',
-        age: '7',
+        age: 7,
     };
 }
 
@@ -35,4 +37,32 @@ export function getStudentsData(): IStudentData[] {
      * 3. Petr Ivanov 19 лет
      *
      */
+
+    let students = [
+        'Ivan Petrov 20 лет +7(555)555-55-50',
+        'Stepan Petrov 19 лет +7(555)555-55-51',
+        'Petr Ivanov 19 лет',
+    ];
+
+    let s_1: IStudentData = {
+        name: 'Ivan',
+        secondName: 'Petrov',
+        age: 20,
+        phone: '+7(555)555-55-50',
+    };
+    let s_2: IStudentData = {
+        name: 'Stepan',
+        secondName: 'Petrov',
+        age: 19,
+        phone: '+7(555)555-55-51',
+    };
+    let s_3: IStudentData = {
+        name: 'Petr',
+        secondName: 'Ivanov',
+        age: 19,
+    };
+
+    let res = [s_1, s_2, s_3];
+
+    return res;
 }
